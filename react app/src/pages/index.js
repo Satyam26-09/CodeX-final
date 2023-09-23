@@ -155,7 +155,7 @@ export default function Home() {
             <div className="flex justify-center space-x-4">
               <button onClick={() => handleRoleSelect("miner")} className="bg-purple-500 rounded-lg px-4 py-2 text-white font-semibold focus:outline-none hover:bg-purple-600 transition-colors duration-300">Miner</button>
               <button onClick={() => handleRoleSelect("supervisor")} className="bg-purple-500 rounded-lg px-4 py-2 text-white font-semibold focus:outline-none hover:bg-purple-600 transition-colors duration-300">Supervisor</button>
-              <button onClick={() => handleRoleSelect("head")} className="bg-purple-500 rounded-lg px-4 py-2 text-white font-semibold focus:outline-none hover:bg-purple-600 transition-colors duration-300">Student</button>
+              <button onClick={() => handleRoleSelect("student")} className="bg-purple-500 rounded-lg px-4 py-2 text-white font-semibold focus:outline-none hover:bg-purple-600 transition-colors duration-300">Student</button>
             </div>
           </div>
         )}
