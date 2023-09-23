@@ -76,6 +76,7 @@ export default function Home() {
       questions.forEach((question, index) => {
         setTimeout(() => {
           setChatLog((prevChatLog) => [...prevChatLog, { type: 'bot', message: question, clickable: true, index }]);
+          flag=true;
         }, 50 * index); // Display each question with a delay
       });
     }
@@ -90,7 +91,6 @@ export default function Home() {
       setChatLog((prevChatLog) => [...prevChatLog, { type: 'user', message: inputValue }]);
       sendMessage(inputValue);
       setInputValue('');
-      flag=false;
     } else {
       // Handle a case where the user hasn't selected a role yet.
       setChatLog((prevChatLog) => [...prevChatLog, { type: 'bot', message: "Please select a role first." }]);
@@ -108,6 +108,7 @@ export default function Home() {
       // Remove other questions by updating chatLog
       sendMessage(question.message);
       setChatLog((prevChatLog) => prevChatLog.filter((item) => item.index === index));
+      flag=false;
     }
   };
 
